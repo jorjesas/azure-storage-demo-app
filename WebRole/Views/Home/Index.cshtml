@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script type="text/javascript">
+
+
+    (function poll(){
+        setTimeout(function () {
+            $.ajax({
+                url: '@Url.Action("GetMessage")',
+                success: function (data) {
+                    $("#pMessages").text(data);
+
+                    poll();
+                }})
+                }, 5000);
+                })();
+</script>
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Azure Storage - Blobs</h2>
+        </div>
+    </div>
+</div>
