@@ -7,7 +7,7 @@
     }
 
     main {
-        margin: 20px;
+        /*margin: 20px;*/
     }
 
     #gallery-note {
@@ -16,8 +16,8 @@
 
     .blueimp-gallery {
         margin: 25px;
-        max-width: 150px;
-        padding-bottom: 150px;
+        max-width: 350px;
+        padding-bottom: 350px;
     }
 
     .dropzone {
@@ -37,42 +37,52 @@
                 font-size: 18px;
                 font-weight: 200;
                 display: block;
-                margin-top 1.5rem;
+                margin-top: 1.5rem;
             }
 </style>
 
 <main>
-    <div class="box header">
-        <h1><span class="fa fa-user-circle-o"></span> <span id="page-title">Blob Storage - Demo App</span></h1>
+
+    <div class="row jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Blob Storage - Demo App</h2>
+                <p></p>
+            </div>
+        </div>
     </div>
+    <br />
 
     <div class="box content">
-        <hr>
-        <h2>Upload photos</h2>
-        <div>
-            <form action="/blob/upload"
-                  class="dropzone needsclick dz-clickable"
-                  id="image-upload"
-                  method="post"
-                  enctype="multipart/form">
-                <div class="dz-message needsclick">
-                    <span class="note needsclick">
-                        Drop files here or click to upload.
-                    </span>
-                </div>
-            </form>
+        <div class="col-md-6">
+            <h2>Upload photos</h2>
+            <div>
+                <form action="/blob/upload"
+                      class="dropzone needsclick dz-clickable"
+                      id="image-upload"
+                      method="post"
+                      enctype="multipart/form">
+                    <div class="dz-message needsclick">
+                        <span class="note needsclick">
+                            Drop files here or click to upload.
+                        </span>
+                    </div>
+                </form>
+            </div>
         </div>
-        <h2>Generated Thumbnails</h2>
-        <!-- <p><span id="gallery-note">Gallery refreshes from storage container image links every 5 seconds.</span></p> -->
-        <div id="stored-images"></div>
-        <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
-        <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
-            <div class="slides"></div>
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
+        <div class="col-md-6">
+            <h2>Generated Thumbnails</h2>
+            <!-- <p><span id="gallery-note">Gallery refreshes from storage container image links every 5 seconds.</span></p> -->
+            <div id="stored-images"></div>
+            <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
+            <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+                <div class="slides"></div>
+                <h3 class="title"></h3>
+                <a class="prev">‹</a>
+                <a class="next">›</a>
+                <a class="play-pause"></a>
+                <ol class="indicator"></ol>
+            </div>
         </div>
     </div>
 

@@ -65,7 +65,7 @@ namespace WebRole.Controllers
             }
         }
 
-        public void SendMessage()
+        public void SendMessage(string inputMessage)
         {
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=allegrov6backups;AccountKey=9ac06d2uDIPOwYr80dLsOb9e5EmQV4ioTPQXIYZf2zVp096W8Frq9ACrHTub8s0asLnTYGG+WruxPrPltGqEAQ==");
             CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
@@ -75,7 +75,7 @@ namespace WebRole.Controllers
             queue.CreateIfNotExists();
 
             // send a message to the queue
-            CloudQueueMessage message = new CloudQueueMessage(string.Format("Sending at {0} from {1}", DateTime.Now, RoleEnvironment.CurrentRoleInstance));
+            CloudQueueMessage message = new CloudQueueMessage(string.Format("({0}) App says: {1}", DateTime.Now, inputMessage));
             queue.AddMessage(message);
         }
     }

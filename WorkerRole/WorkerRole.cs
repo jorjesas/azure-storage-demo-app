@@ -86,7 +86,8 @@ namespace WorkerRole
 
                     if (retrievedMessage != null)
                     {
-                        var messages = new StringBuilder("Worker received: " + retrievedMessage.AsString);
+
+                        var messages = new StringBuilder("Worker says hello! " + retrievedMessage.AsString);
                         messages.AppendLine();
 
                         // read the latest messages from the table            
@@ -102,24 +103,24 @@ namespace WorkerRole
 
                         messages.AppendLine(myMessages.Messages);
 
-                        var filename = RoleEnvironment.IsEmulated
-                                     ? @"c:\windows\system32\cmd.exe"
-                                     : @"d:\windows\system32\cmd.exe";
+                        //var filename = RoleEnvironment.IsEmulated
+                        //             ? @"c:\windows\system32\cmd.exe"
+                        //             : @"d:\windows\system32\cmd.exe";
 
-                        var processStartInfo = new ProcessStartInfo()
-                        {
-                            Arguments = "/c echo \"test message from a process on the worker vm\"",
-                            FileName = filename,
-                            RedirectStandardOutput = true,
-                            UseShellExecute = false
-                        };
+                        //var processStartInfo = new ProcessStartInfo()
+                        //{
+                        //    Arguments = "/c echo \"test message from a process on the worker vm\"",
+                        //    FileName = filename,
+                        //    RedirectStandardOutput = true,
+                        //    UseShellExecute = false
+                        //};
 
-                        var process = Process.Start(processStartInfo);
+                        //var process = Process.Start(processStartInfo);
 
-                        using (var streamReader = new StreamReader(process.StandardOutput.BaseStream))
-                        {
-                            messages.AppendLine(streamReader.ReadToEnd() + " at " + DateTime.Now.ToString() + " on " + RoleEnvironment.CurrentRoleInstance);
-                        }
+                        //using (var streamReader = new StreamReader(process.StandardOutput.BaseStream))
+                        //{
+                        //    messages.AppendLine(streamReader.ReadToEnd() + " at " + DateTime.Now.ToString() + " on " + RoleEnvironment.CurrentRoleInstance);
+                        //}
 
                         // replace the messages
                         myMessages.Messages = messages.ToString();
