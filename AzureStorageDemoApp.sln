@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "MSDN.WebWorkerLaunch", "MSDN.WebWorkerLaunch\MSDN.WebWorkerLaunch.ccproj", "{9E6D3657-86D2-4C28-AB6A-5BA2A852CCCB}"
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureStorageDemoApp.WebWorkerLaunch", "MSDN.WebWorkerLaunch\AzureStorageDemoApp.WebWorkerLaunch.ccproj", "{9E6D3657-86D2-4C28-AB6A-5BA2A852CCCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRole", "WebRole\WebRole.csproj", "{39355CC5-F206-418F-9332-C4B2E401C965}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureStorageDemoApp.WebRole", "WebRole\AzureStorageDemoApp.WebRole.csproj", "{39355CC5-F206-418F-9332-C4B2E401C965}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerRole", "WorkerRole\WorkerRole.csproj", "{E60EAE79-832C-43AB-A7B6-BB8C13CEF015}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureStorageDemoApp.WorkerRole", "WorkerRole\AzureStorageDemoApp.WorkerRole.csproj", "{E60EAE79-832C-43AB-A7B6-BB8C13CEF015}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D7225A3-F0FE-4B7E-B364-70A24DE225D3}
 	EndGlobalSection
 EndGlobal
